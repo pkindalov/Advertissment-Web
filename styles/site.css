@@ -1,0 +1,204 @@
+body{
+    font-family: "Times New Roman", "Helvetica Neue";
+    font-size: 1.0em;
+}
+
+.topMenuIcons{
+	height: 15px;
+	width: 15px;
+}
+
+.zoomInZooMOut{
+    height: 15px;
+    width: 15px;
+    padding-right: 2px;
+    margin-top: -2px;
+
+}
+
+.zoomInZoomOutButtons, .copyButton{
+    margin-top: 5px;
+    margin-right: 6px;
+}
+
+#share-buttons img {
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+
+.helloUsername{
+    color: #7CB3E9;
+    text-decoration: underline;
+}
+
+.full{
+    visibility: hidden;
+}
+
+.fullVisibilOn{
+    visibility: visible;
+}
+
+.container {
+    position: relative;
+    top: 30%;
+    z-index: 2;
+    margin: 0 auto;
+    max-width: 720px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.video{
+    position: fixed;
+    top: 50%; left: 50%;
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+
+#menu{
+    text-align: center;
+    padding: 5px;
+    line-height: 1.5;
+    border-radius: 3px;
+    width: 120%;
+    margin-left: -10%;
+}
+
+ul {
+    list-style-type: none;
+    margin: -15px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-size: 0.87em;
+}
+
+li {
+    float: left;
+    line-height: 300%;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #CED627;
+    color: black;
+}
+
+
+
+li>a:visited{
+    background-color: #CED627;
+}
+
+main>section{
+
+    padding: 20px 5px;
+    font-weight: normal;
+    font-size: 1.6em;
+}
+
+section h1{
+    margin:10px 0px;
+    font-size: 2.1em;
+}
+
+section>p{
+    font-size: 0.7em;
+}
+
+#infobox, #errorBox, #loadingBox{
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+footer{
+    margin-top: 10%;
+    color: #7CB3E9;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.singleAdd{
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-top: 2px;
+    background-color: rgba(255,255,255,0.7);
+    margin-left: -18px;
+    width: 740px;
+    white-space: pre-wrap;      /* CSS3 */
+    white-space: -moz-pre-wrap; /* Firefox */
+    white-space: -pre-wrap;     /* Opera <7 */
+    white-space: -o-pre-wrap;   /* Opera 7 */
+    word-wrap: break-word;      /* IE */
+}
+.page{
+	display:none;
+}
+#page-1{
+	display:block;
+}
+#addDescription{
+    background-color: rgba(255,255,255,0.7);
+    border-radius:10px;
+}
+#addTitle{
+    background-color: rgba(255,255,255,0.7);
+    border-radius:10px;
+}
+#registerUser, #registerPassword, #loginUser, #loginPassword, #confirmPassword{
+    background-color: rgba(255,255,255,0.7);
+    border-radius:10px;
+}
+
+#viewRegister{
+    text-align: center;
+}
+
+#formRegister, #formLogin{
+    height: 400px;
+    text-align: center;
+    width: 100%;
+    margin-left: 7%;
+}
+
+#formRegister{
+    height: 450px;
+}
+
+.col-xs-4{
+    margin-left: 200px;
+    margin-top: 30px;
+}
+
+.form-group{
+    padding-top: 10px;
+}
+
+.buttonEdit, .buttonDelete, .readMore, .hide{
+    margin: 5px;
+
+}
+
+.buttonsMargin{
+    margin: 15px;
+}
