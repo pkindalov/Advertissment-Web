@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mauris</title>
+    <script src="scripts/jquery-3.1.0.min.js"></script>
+    <script src="scripts/ads-listing.js"></script>
+    <script type="text/javascript" src="scripts/tooltipster-master/dist/js/tooltipster.bundle.min.js"></script>
+    <script type="text/javascript" src="scripts/visitorsCounter.js"></script>
+    <script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="styles/site.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="styles/printFriendly.css" />
+    <link rel="stylesheet" type="text/css" href="scripts/tooltipster-master/dist/css/tooltipster.bundle.min.css" />
+
+    <style type="text/css">
+        .form-control{
+            width: 40%;
+            min-width: 100px;
+            margin-left: 30%;
+        }
+    </style>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.tooltip').tooltipster({
+
+            });
+        });
+   </script>
+
+</head>
+<body>
+<!-- social icons -->
+
+
+<div class="tab-content">
+<div class="container">
+<header id="menu">
+    <ul class="nav nav-tabs" id="navMenu">
+        <li> <a data-toggle="tab" class="tooltip" title="Main page of site" href="#" id="linkHome">
+        	<span><img class="topMenuIcons" src="media/earth-grid.png" alt="home" /></span>
+        	HOME
+       		 </a></li>
+        <li> <a data-toggle="tab" class="tooltip" title="Learn more about us, or you can see us on the map or if you have questions you can write us in contact form" href="#" id="linkAbout">
+       		 <span><img class="topMenuIcons" src="media/laptop-1.png" alt="about" /></span>
+        	ABOUT</a></li>
+        <li> <a data-toggle="tab"class="tooltip" title="If you are registered user you can login to site from here. Else you can make profil from register menu on right" href="#" id="linkLogin">
+        	<span><img class="topMenuIcons" src="media/communication-1.png" alt="login" /></span>
+        	LOGIN</a></li>
+        <li> <a data-toggle="tab" class="tooltip" title="You can make your personal profil on site here. Wellcome :)" href="#" id="linkRegister">
+        	<span><img class="topMenuIcons" src="media/antenna.png" alt="register" /></span>
+        	REGISTER</a></li>
+        <li> <a data-toggle="tab" class="tooltip" title="In this section are all your posts" href="#" id="linkMyAdds">
+        	<span><img class="topMenuIcons" src="media/speech-bubble.png" alt="my advertisments" /></span>
+        	MY ADVERTISMENTS</a></li>
+        <li> <a data-toggle="tab" class="tooltip" title="Here are advertisment from you and all other users" href="#" id="linkListAdds">
+        	<span><img class="topMenuIcons" src="media/speech-bubbles.png" alt="all advertisments" /></span>
+        	ALL ADVERTISMENTS</a></li>
+        <li> <a data-toggle="tab" class="tooltip" title="From here you can create new advertisment. Come on. Try it." href="#" id="linkCreateAdd">
+        	<span><img class="topMenuIcons" src="media/speaking.png" alt="new advertisments" /></span>
+        	NEW ADVERTISMENT</a></li>
+        <li> <a data-toggle="tab" class="tooltip" title="Exit from your profil" href="#" id="linkLogout">
+        	<span><img class="topMenuIcons" src="media/communication.png" alt="logout" /></span>
+        	LOGOUT</a></li>
+    </ul>
+
+</header>
+
+<main>
+        <section class="alert alert-info" id="loadingBox">Loading...</section>
+        <section class="alert alert-success" id="infoBox" onclick='$(this).fadeOut()'>Info</section>
+        <section class="alert alert-danger" id="errorBox" onclick='$(this).fadeOut()'>Error</section>
+        <section class="tab-pane fade in active" id="viewHome">
+
+
+        <h1 id="greetingsHeading">Greetings</h1>
+
+
+        <h3><em>Welcome to <u>Mauris</u> - the advertising web</em></h3><br>
+        <p>Here you can post everything that you want to sell/buy. Just login into your account and
+           click the <strong>New Advertisment</strong> link. If you are not in our system, you can still browse the collection
+           of advertisments our other users have. Enjoy your stay!</p><br>
+
+        <p>Get started advertising your products.
+           There are legions of users who might love your themes — but first they need to know about it.
+           Promote your ads on our site. Reach new audiences.
+           It's fast and easy to get started. Select the product you want to advertise and start your campaign!
+        </p>
+
+        <a href="#"  onclick="magnifieText('viewHome')">
+          <img class="zoomInZooMOut tooltip" style="margin-left: 50%;" title="Increase font size of text" src="media/zoom-in.png" alt="zoom text" />
+        </a>
+        <a href="#"  onclick="decreaseText('viewHome')">
+          <img class="zoomInZooMOut tooltip" style="margin-left: 47%;" title="Decrease font size" src="media/zoom-out.png" alt="zoom text" />
+        </a>
+        </section>
+
+
+        <section class="tab-pane fade in active" id="viewAbout">
+            <h1>Who are we ?</h1><br>
+            <p>We are four students currently learning in <abbr title="For more information visit the following link https://www.softuni.bg">SoftUni.</abbr> The idea of this
+            website is to create an environment for users to easily publish their advertisments
+            and read such. It is developed to easily make a registration and browse the community.
+            </p>
+
+            <a href="#"  onclick="magnifieText('viewAbout')">
+                <img class="zoomInZooMOut tooltip" style="margin-left: 47%;" title="Increase font size of text" src="media/zoom-in.png" alt="zoom text" />
+            </a>
+            <a href="#"  onclick="decreaseText('viewAbout')">
+                 <img class="zoomInZooMOut tooltip" style="margin-left: 44%;" title="Decrease font size" src="media/zoom-out.png" alt="zoom text" />
+            </a><br />
+
+            <p>
+                <button class="btn btn-success tooltip" style="margin-left: 39%;" title="You cand send us mails from here" onclick="showHideContacts()"><img class="zoomInZooMOut" src="media/contacts.png" alt="contact form" />CONTACTS</button>
+            </p>
+
+            <article class="contacts">
+                 <script type="text/javascript"> id = 205819; clr = "e9e9e9---"; </script>
+                 <script type="text/javascript" src="http://kontactr.com/wp.js"></script>
+            </article>
+
+             <p>
+                 <button class="btn btn-success tooltip" title="See us on map from here" style="margin-left: 42%; margin-top: 5%;" onclick="showHideMap()"><img class="zoomInZooMOut" src="media/map.png" alt="find us on map" />MAP</button>
+            </p>
+
+            <article class="map">
+                <iframe style="margin-top: 10%; padding-bottom: 10%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.7496434892482!2d23.348489451142168!3d42.66666047906509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85cb55c36753%3A0xbde203f1e5db85d1!2sul.+%22Tintyava%22+15-17%2C+1113+Sofia!5e0!3m2!1sen!2sbg!4v1471947880301" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </article>
+
+        </section>
+
+
+      <section class="tab-pane fade in active" id="viewLogin">
+
+            <div class="form-group">
+                <form id="formLogin">
+                  <div class="col-md-10">
+                     <h1>Login</h1><br>
+                         Username:
+                            <input class="form-control" type="text" id="loginUser" required/>
+                         Password:
+                            <input class="form-control" type="password" id="loginPassword" required/>
+
+                        <div class="form-group">
+                            <button class="btn btn-primary" type="submit"><img class="zoomInZooMOut" src="media/login.png" alt="login to site" />LOGIN</button>
+                        </div>
+                  </div>
+                </form>
+          </div>
+     </section>
+
+    <section class="tab-pane fade in active" id="viewRegister">
+            <div class="form-group">
+                <form id="formRegister">
+                    <div class="col-md-10">
+                        <h1>Register</h1><br>
+                            Username:
+                                <input class="form-control" type="text" id="registerUser" required/>
+                            Password:
+                                <input class="form-control" type="password" id="registerPassword" required/>
+                            Confirm Password:
+                                <input class="form-control" type="password" id="confirmPassword" required/>
+
+                                <div class="form-group">
+                                    <button class="btn btn-primary" type="submit"><img class="zoomInZooMOut" src="media/register.png" alt="register" />REGISTER</button>
+                                </div>
+                   </div>
+              </form>
+         </div>
+    </section>
+
+    <section class="tab-pane fade in active" id="viewMyAdds">
+			   <h2>These are your personal advertisments</h2><br>
+            <div id="myAdds"></div>
+
+            <a href="#"  onclick="magnifieText('viewMyAdds')">
+                <img class="zoomInZooMOut tooltip" style="margin-left: 47%; margin-top: 10px;" title="Increase font size of text" src="media/zoom-in.png" alt="zoom text" />
+            </a>
+             <a href="#"  onclick="decreaseText('viewMyAdds')">
+                 <img class="zoomInZooMOut tooltip" style="margin-left: 44%; margin-top: 10px;" title="Decrease font size" src="media/zoom-out.png" alt="zoom text" />
+             </a><br />
+
+			      <div id="page-selection"></div>
+    </section>
+
+    <section class="tab-pane fade in active" id="viewAdds">
+        <h2>These are the latest advertisments</h2><br>
+        <div id="AllAdds"></div>
+
+        <a href="#"  onclick="magnifieText('viewAdds')">
+            <img class="zoomInZooMOut tooltip" style="margin-left: 47%; margin-top: 10px;" title="Increase font size of text" src="media/zoom-in.png" alt="zoom text" />
+        </a>
+        <a href="#"  onclick="decreaseText('viewAdds')">
+          <img class="zoomInZooMOut tooltip" style="margin-left: 44%; margin-top: 10px;" title="Decrease font size" src="media/zoom-out.png" alt="zoom text" />
+        </a><br />
+
+        <div id="page-selectionAllAdds"></div>
+    </section>
+
+    <section class="tab-pane fade in active" id="viewCreateAdd">
+        <h1>Create a new Add</h1>
+            <form id="formCreateAdd">
+                <div><strong>Title:</strong></div>
+                <div><input class="form-control" type="text" id="addTitle" required/></div>
+
+                <div><strong>Description:</strong></div>
+                <div><textarea class="form-control" style="width: 80%; min-width: 230px; margin-left: 10%;" id="addDescription" rows="20" cols="100" required></textarea></div>
+
+                <div><button id="tooltip" class="btn btn-primary buttonsMargin" title="Click to add new advertisment" type="submit"><img class="zoomInZooMOut" src="media/add.png" alt="add new post" />Publish</button>
+                <button id="tooltip" class="btn btn-success buttonsMargin" title="This will clear all form. Be carefull." type="reset"><img class="zoomInZooMOut" src="media/eraser.png" alt="add new post" />Clear</button></div>
+            </form>
+    </section>
+
+    <section class="tab-pane fade in active" id="viewModifyAdd">
+            <h1>Modify Add</h1>
+            <form id="formModifyAdd">
+                <input type="hidden" id="addModifyId" required/>
+                <div><strong>Title:</strong></div>
+                <div><input class="form-control" type="text" id="addModifyTitle" required/></div>
+
+                <div><strong>Description:</strong></div>
+                <div><textarea class="form-control" style="width: 80%; min-width: 230px; margin-left: 10%;" id="addModifyDescription" rows="20" cols="100" required></textarea></div>
+                <div>
+                     <!--<input class="btn btn-primary buttonsMargin" type="submit" value="Modify"/>-->
+                    <button id="tooltip"  class="btn btn-primary buttonsMargin" title="Click to edit current advertisment" onclick="modifyAdd()"><img class="zoomInZooMOut" src="media/edit.png" alt="modify post" />Modify</button>
+                     <button id="tooltip" class="btn btn-success buttonsMargin" title="Click here to return in My advertisments page" onclick="redirectMyAdvert(event)"><img class="zoomInZooMOut" src="media/back.png" alt="back button" />Back</button>
+                </div>
+            </form>
+    </section>
+</main>
+
+
+<footer class="tab-pane fade in active">
+    <strong> &copy; Mauris - All rights reserved</strong><br />
+        <a href="http://www.reddit.com/submit" onclick="window.location = 'http://www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="http://www.reddit.com/static/spreddit7.gif" alt="submit to reddit" border="0" /> </a>
+
+        <div id="share-buttons">
+
+          <!-- Buffer -->
+          <a href="https://bufferapp.com/add?url=https://simplesharebuttons.com&amp;text=Simple Share Buttons" target="_blank">
+              <img src="https://simplesharebuttons.com/images/somacro/buffer.png" alt="Buffer" />
+          </a>
+
+          <!-- Digg -->
+          <a href="http://www.digg.com/submit?url=https://simplesharebuttons.com" target="_blank">
+              <img src="https://simplesharebuttons.com/images/somacro/diggit.png" alt="Digg" />
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
+              <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+          </a>
+
+          <!-- Facebook -->
+          <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+              <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+          </a>
+
+          <!-- Google+ -->
+          <a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
+              <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
+              <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+          </a>
+
+          <!-- Pinterest -->
+          <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+              <img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" />
+          </a>
+
+          <!-- Print -->
+          <a href="javascript:;" onclick="window.print()">
+              <img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
+          </a>
+
+        <!-- Reddit -->
+        <a href="http://reddit.com/submit?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank">
+            <img src="https://simplesharebuttons.com/images/somacro/reddit.png" alt="Reddit" />
+        </a>
+
+        <!-- StumbleUpon-->
+        <a href="http://www.stumbleupon.com/submit?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank">
+            <img src="https://simplesharebuttons.com/images/somacro/stumbleupon.png" alt="StumbleUpon" />
+       </a>
+
+       <!-- Tumblr-->
+       <a href="http://www.tumblr.com/share/link?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank">
+          <img src="https://simplesharebuttons.com/images/somacro/tumblr.png" alt="Tumblr" />
+      </a>
+
+      <!-- Twitter -->
+      <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+          <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+      </a>
+
+      <!-- VK -->
+      <a href="http://vkontakte.ru/share.php?url=https://simplesharebuttons.com" target="_blank">
+          <img src="https://simplesharebuttons.com/images/somacro/vk.png" alt="VK" />
+      </a>
+
+     <!-- Yummly -->
+     <a href="http://www.yummly.com/urb/verify?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/yummly.png" alt="Yummly" />
+    </a>
+
+  </div>
+
+ <script type="text/javascript">
+  <!-- Begin
+    document.write("You've been here <strong>" + amt() + "</strong> times.")
+ // End -->
+</script>
+
+</div>
+
+
+    <video id="my-video" class="video" autoplay muted loop>
+        <source src="media/demo.mp4" type="video/mp4">
+        <source src="media/demo.ogv" type="video/ogg">
+        <source src="media/demo.webm" type="video/webm">
+    </video>
+
+  </footer>
+
+</body>
+</html>
