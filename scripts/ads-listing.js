@@ -470,9 +470,79 @@ function magnifieTextPost(postId){
     }
 
      currentSize = currentSize + increase + "px";
+
+    // let spanElement = $('#viewAbout span');
+    // document.write(spanElement);
+    // magnifieTextHTMLelement(spanElement);
     $(currentView + ' p').css({"font-size": currentSize});
 
+
 }
+
+
+
+function magnifieTextHTMLelement(element){
+  let increase = 1;
+  let currentSize = parseInt($(element).css("font-size"));
+  //document.write(currentSize);
+
+  if(currentSize > 30){
+      //alert('You have reached maximum size');
+      currentSize = 30;
+  }
+
+  currentSize = currentSize + increase + "px";
+
+  $(element).css({"font-size": currentSize});
+
+
+}
+
+
+function decreaseTextHTMLelement(element){
+  let increase = 1;
+  let currentSize = parseInt($(element).css("font-size"));
+  //document.write(currentSize);
+
+  if(currentSize < 8){
+      //alert('You have reached minimum size');
+      currentSize = 8;
+  }
+
+  currentSize = currentSize - increase + "px";
+
+  $(element).css({"font-size": currentSize});
+
+
+}
+
+
+function whichButton(event, currentElement){
+  let mouseButton = event.button;
+
+  if(mouseButton == 0){
+    magnifieTextHTMLelement(currentElement);
+  }else if (mouseButton = 1) {
+      $(window).bind('mousewheel DOMMouseScroll', function(event){
+      if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+        // scroll up
+        magnifieTextHTMLelement(currentElement);
+      }
+      else {
+        // scroll down
+        decreaseTextHTMLelement(currentElement);
+      }
+  });
+  }else if (mouseButton == 2) {
+    decreaseTextHTMLelement(currentElement);
+  }
+
+
+
+}
+
+
+
 
 function decreaseTextPost(postId){
 
@@ -512,25 +582,35 @@ function printDiv(divName) {
         var restorepage = document.body.innerHTML;
         var printcontent = $(divToPrint + ' p:nth-child(2)').html();
         var printcontent2 = $(divToPrint + ' p:nth-child(3)').html();
-        document.body.innerHTML = "<div style='margin: 0 auto; width: 100%' class='singleAdd'>" + printcontent + "<br />" + printcontent2 + "</div>";
+
+        document.body.style.backgroundColor = "#E9E9E9";
+        document.body.innerHTML = "<div class='printfriendly'>" + "<h3>" + printcontent + "</h3>" + "<hr />" + "<br />" + "<p>" + printcontent2 + "</p>" +  "</div>";
+
         window.print();
         document.body.innerHTML = restorepage;
-        
+
         location.reload();
 
 }
+
+
 
 function printLongDiv(divName) {
 
         let divToPrint = '#' + divName.id;
+
         var restorepage = document.body.innerHTML;
         var printcontent = $(divToPrint + ' p:nth-child(2)').html();
         var printcontent2 = $(divToPrint + ' p:nth-child(4)').html();
-        document.body.innerHTML = "<div style='margin: 0 auto; width: 100%' class='singleAdd'>" + printcontent + "<br />" + printcontent2 + "</div>";
+
+        document.body.style.backgroundColor = "#E9E9E9";
+        document.body.innerHTML = "<div class='printfriendly'>" + "<h3>" + printcontent + "</h3>" + "<hr />" + "<br />" + "<p>" + printcontent2 + "</p>" + "</div>";
+
         window.print();
         document.body.innerHTML = restorepage;
         location.reload();
 }
+
 
 function listAdds() {
     $('#AllAdds').empty();
@@ -571,7 +651,7 @@ function listAdds() {
             pages[0] = $('<div class="page" id="page-1">');
             var pageIndex = 0;
             for(let add of adds){
-                
+
                     let adds = $('<div class="singleAdd panel-body" style="width: 90%; min-width: 200px; margin-left: 7%;" id=' +add._id + '>');
 
                     if(userAdsCount % ADS_PER_PAGE == 0 && userAdsCount != 0)
