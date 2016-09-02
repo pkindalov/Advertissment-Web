@@ -504,9 +504,9 @@ function decreaseTextHTMLelement(element){
   let currentSize = parseInt($(element).css("font-size"));
   //document.write(currentSize);
 
-  if(currentSize < 8){
+  if(currentSize < 16){
       //alert('You have reached minimum size');
-      currentSize = 8;
+      currentSize = 16;
   }
 
   currentSize = currentSize - increase + "px";
