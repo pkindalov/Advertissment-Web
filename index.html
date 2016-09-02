@@ -34,7 +34,7 @@
    </script>
 
 </head>
-<body onmousedown="whichButton(event, this);">
+<body>
 <!-- social icons -->
 
 
@@ -75,7 +75,7 @@
         <section class="alert alert-info" id="loadingBox">Loading...</section>
         <section class="alert alert-success" id="infoBox" onclick='$(this).fadeOut()'>Info</section>
         <section class="alert alert-danger" id="errorBox" onclick='$(this).fadeOut()'>Error</section>
-        <section class="tab-pane fade in active" id="viewHome">
+        <section onmousedown="whichButton(event, this);" class="tab-pane fade in active" id="viewHome">
 
 
         <h1 id="greetingsHeading">Greetings</h1>
