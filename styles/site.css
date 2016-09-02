@@ -1,6 +1,7 @@
 body{
     font-family: "Times New Roman", "Helvetica Neue";
     font-size: 1.0em;
+    background-image: url('../media/wall.jpg');
 }
 
 .topMenuIcons{
