@@ -172,19 +172,19 @@ function showMyAddsView() {
 				for(let add of allAds){
 					if(add.author === currentlyLoggedUser){
 						let adds = $('<div class="singleAdd panel-body" style="width: 90%; min-width: 200px; margin-left: 7%;" id=' +add._id + '>');
-						
+
 						if(userAdsCount % ADS_PER_PAGE == 0 && userAdsCount != 0)
 						{
 							pageIndex++;
 							pages[pageIndex] = $('<div class="page" id="page-' + (pageIndex+1) +'">');
 						}
 						userAdsCount++;
-						
+
 						let singleAddHeading = $('<h1>').html(add.title);
 						let singleAddAuthor = $('<p>').html("posted by " +
 							"<span class='helloUsername'>" + add.author + "</span>");
 
-                       
+
 					let fullText = add.description;
                     let shortTxt = add.description.substring(0, 101);
 
@@ -200,7 +200,7 @@ function showMyAddsView() {
 
 
                     let readMore = $('<button class="readMore btn btn-success" onclick="readMore(this)"><img class="zoomInZooMOut" src="media/cursor.png" alt="read more icon" />Read More..</button>').attr('id', postId);
-                   
+
                     let hideText = $('<button class="hide btn btn-success" onClick="hide(this)"><img class="zoomInZooMOut" src="media/hide.png" alt="hide text" />Hide...</button>').attr('id', postId);
 
                     let btn_edit = $('<button class="buttonEdit btn btn-primary" data-id="'+add._id+'"><img class="zoomInZooMOut" src="media/edit.png" alt="edit post" />Edit</button>');
@@ -224,7 +224,7 @@ function showMyAddsView() {
                         let printButton = $('<button class="copyButton btn btn-success" onclick="printLongDiv(this)"><img class="zoomInZooMOut" src="media/printer.png" alt="hide text" />Print</button>').attr('id', postId);
                         singleAdd = [singleAddHeading,singleAddAuthor,singleAddText, singleFullText, readMore, hideText,btn_edit, btn_delete, zoomIn, zoomOut, copyButton, printButton];
 
-                        
+
                     }
 						adds.append(singleAdd);
 						pages[pageIndex].append(adds);
@@ -250,7 +250,7 @@ function showPage(pageIndex){
 Functions suchs as login, logout and register
  */
 function login() {
-    
+
     const kinveyLoginUrl = kinveyBaseUrl + "user/" + kinveyAppKey + "/login";
     const kinveyAuthHeaders = {
         'Authorization': "Basic " + btoa(kinveyAppKey + ":" + kinveyAppSecret),
@@ -418,7 +418,7 @@ function magnifieText(view){
 
     $(currentView + ' p').css({"font-size": currentSize});
 
-    
+
 }
 
 
@@ -520,22 +520,46 @@ function decreaseTextHTMLelement(element){
 function whichButton(event, currentElement){
   let mouseButton = event.button;
 
-  if(mouseButton == 0){
-    magnifieTextHTMLelement(currentElement);
-  }else if (mouseButton = 1) {
-      $(window).bind('mousewheel DOMMouseScroll', function(event){
-      if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-        // scroll up
-        magnifieTextHTMLelement(currentElement);
-      }
-      else {
-        // scroll down
-        decreaseTextHTMLelement(currentElement);
-      }
-  });
-  }else if (mouseButton == 2) {
-    decreaseTextHTMLelement(currentElement);
+  switch (mouseButton) {
+    case 0:
+      magnifieTextHTMLelement(currentElement);
+      break;
+    case 1:
+        $(window).bind('mousewheel DOMMouseScroll', function(event){
+        if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+          // scroll up
+          magnifieTextHTMLelement(currentElement);
+        }
+        else {
+          // scroll down
+          decreaseTextHTMLelement(currentElement);
+        }
+    });
+      break;
+    case 2:
+      decreaseTextHTMLelement(currentElement);
+      break;
+    default:
+
   }
+
+  // if(mouseButton == 0){
+  //   magnifieTextHTMLelement(currentElement);
+  // }else if (mouseButton == 1) {
+  //     event.preventDefault();
+  //     $(window).bind('mousewheel DOMMouseScroll', function(event){
+  //     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+  //       // scroll up
+  //       magnifieTextHTMLelement(currentElement);
+  //     }
+  //     else {
+  //       // scroll down
+  //       decreaseTextHTMLelement(currentElement);
+  //     }
+  // });
+  // }else if (mouseButton == 2) {
+  //   decreaseTextHTMLelement(currentElement);
+  // }
 
 
 
@@ -687,8 +711,8 @@ function listAdds() {
 
                         let copyButton = $('<button class="copyButton btn btn-success" onclick="copy(this)"><img class="zoomInZooMOut" src="media/copy.png" alt="hide text" />Copy</button>').attr('id', postId);
                         let printButton = $('<button class="copyButton btn btn-success" onclick="printDiv(this)"><img class="zoomInZooMOut" src="media/printer.png" alt="hide text" />Print</button>').attr('id', postId);
-                        
-                        
+
+
 
                         singleAdd = [singleAddHeading,singleAddAuthor,singleFullText, zoomIn, zoomOut, copyButton, printButton];
 
@@ -703,12 +727,12 @@ function listAdds() {
                     }
 
 
-                     
+
                     adds.append(singleAdd);
 
 
                     pages[pageIndex].append(adds);
-                
+
             }
             for(var index = 0; index< pages.length; index++){
                 $('#AllAdds').append(pages[index]);
@@ -716,7 +740,7 @@ function listAdds() {
             }
 
         }
-        
+
     }
 
     function showPage(pageIndex){
@@ -762,7 +786,7 @@ function createAdd() {
         success: createAddSuccess,
         error: handleAjaxError
     });
-    
+
     function createAddSuccess(response) {
         showMyAddsView();
         showInfo('Add created.');
@@ -850,8 +874,3 @@ function editAdd(event) {
         showModifyAddView();
     }
 }
-
-
-
-
-
