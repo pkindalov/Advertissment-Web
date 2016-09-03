@@ -203,13 +203,13 @@
         <div id="page-selectionAllAdds"></div>
     </section>
 
-    <section onmousedown="whichButton(event, this);" class="tab-pane fade in active" id="viewCreateAdd">
-        <h1>Create a new Add</h1>
+    <section class="tab-pane fade in active" id="viewCreateAdd">
+        <h1 onmousedown="whichButton(event, this);">Create a new Add</h1>
             <form id="formCreateAdd">
-                <div><strong>Title:</strong></div>
+                <div onmousedown="whichButton(event, this);"><strong>Title:</strong></div>
                 <div><input class="form-control" type="text" id="addTitle" required/></div>
 
-                <div><strong>Description:</strong></div>
+                <div onmousedown="whichButton(event, this);"><strong>Description:</strong></div>
                 <div><textarea class="form-control" style="width: 80%; min-width: 230px; margin-left: 10%;" id="addDescription" rows="20" cols="100" required></textarea></div>
 
                 <div><button id="tooltip" class="btn btn-primary buttonsMargin" title="Click to add new advertisment" type="submit"><img class="zoomInZooMOut" src="media/add.png" alt="add new post" />Publish</button>
