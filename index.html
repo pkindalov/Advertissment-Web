@@ -155,16 +155,16 @@
           </div>
      </section>
 
-    <section onmousedown="whichButton(event, this);" class="tab-pane fade in active" id="viewRegister">
+    <section class="tab-pane fade in active" id="viewRegister">
             <div class="form-group">
                 <form id="formRegister">
                     <div class="col-md-10">
-                        <h1>Register</h1><br>
-                            Username:
+                        <h1 onmousedown="whichButton(event, this);">Register</h1><br>
+                            <p onmousedown="whichButton(event, this);">Username:</p>
                                 <input class="form-control" type="text" id="registerUser" required/>
-                            Password:
+                            <p onmousedown="whichButton(event, this);">Password:</p<
                                 <input class="form-control" type="password" id="registerPassword" required/>
-                            Confirm Password:
+                            <p onmousedown="whichButton(event, this);">Confirm Password:</p>
                                 <input class="form-control" type="password" id="confirmPassword" required/>
 
                                 <div class="form-group">
