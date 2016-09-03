@@ -1,10 +1,17 @@
 /*
 The following lines of code are for the constants such as kinvey credentials!
  */
+// const kinveyBaseUrl = "https://baas.kinvey.com/";
+// const kinveyAppKey = "kid_ryHiPwBO";
+// const kinveyAppSecret = "aadba16ca0234bce98eaf44e0298adb0";
+// const guestCredentials = "e9009d50-666a-47ea-b846-d7304a158b97.SYD6TI7agCiKtP18tYa6oCqha5Bt3VQ5LWLyER+xe1I=";
+// var currentlyLoggedUser = "";
+
+
 const kinveyBaseUrl = "https://baas.kinvey.com/";
-const kinveyAppKey = "kid_ryHiPwBO";
-const kinveyAppSecret = "aadba16ca0234bce98eaf44e0298adb0";
-const guestCredentials = "e9009d50-666a-47ea-b846-d7304a158b97.SYD6TI7agCiKtP18tYa6oCqha5Bt3VQ5LWLyER+xe1I=";
+const kinveyAppKey = "kid_H1aq14Os";
+const kinveyAppSecret = "329525a861524b64b93bc9c41250b4cf";
+const guestCredentials = "5c44e6b2-b3c2-44e4-b0dc-728aeea0511d.coe5Ff0awj1RziVcmso29/G58E79HR+Ek9OdkPwZQcE=";
 var currentlyLoggedUser = "";
 /*
 ------------------------------------------------------
@@ -131,7 +138,7 @@ function showMyAddsView() {
 	$('#page-selection').empty();
     showView('viewMyAdds');
 
-    const kinveyAddsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey + "/Adds?query={}&sort={\"_kmd.lmt\": -1}";
+    const kinveyAddsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey + "/Advertisments?query={}&sort={\"_kmd.lmt\": -1}";
 
     const kinveyAuthHeaders = {
         'Authorization': "Kinvey " + sessionStorage.getItem('authToken'),
@@ -642,7 +649,7 @@ function listAdds() {
 
     showView('viewAdds');
 
-    const kinveyAddsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey + "/Adds?query={}&sort={\"_kmd.lmt\": -1}";
+    const kinveyAddsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey + "/Advertisments?query={}&sort={\"_kmd.lmt\": -1}";
     if(sessionStorage.getItem('authToken')){
         var authToken = sessionStorage.getItem('authToken');
     }
@@ -751,7 +758,7 @@ function listAdds() {
 }
 
 function createAdd() {
-    const kinveyAddsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey + "/Adds";
+    const kinveyAddsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey + "/Advertisments";
     const kinveyAuthHeaders = {
       'Authorization': "Kinvey " + sessionStorage.getItem('authToken'),
     };
@@ -795,7 +802,7 @@ function createAdd() {
 
 function modifyAdd() {
     var id = $('#addModifyId').val();
-    const kinveyAddsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey+ "/Adds/"+id;
+    const kinveyAddsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey+ "/Advertisments/"+id;
     const kinveyAuthHeaders = {
         'Authorization': "Kinvey " + sessionStorage.getItem('authToken'),
     };
@@ -832,7 +839,7 @@ function deleteAdd(event) {
     let id = $(this).attr('data-id');
 
 
-    const kinveyAddsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey + "/Adds";
+    const kinveyAddsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey + "/Advertisments";
     const kinveyAuthHeaders = {
         'Authorization': "Kinvey " + sessionStorage.getItem('authToken'),
     };
@@ -854,7 +861,7 @@ function deleteAdd(event) {
 function editAdd(event) {
     event.preventDefault();
     let id = $(this).attr('data-id');
-    const kinveyAddsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey + "/Adds/"+id;
+    const kinveyAddsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey + "/Advertisments/"+id;
     const kinveyAuthHeaders = {
         'Authorization': "Kinvey " + sessionStorage.getItem('authToken'),
     };
