@@ -11,7 +11,7 @@ The following lines of code are for the constants such as kinvey credentials!
 const kinveyBaseUrl = "https://baas.kinvey.com/";
 const kinveyAppKey = "kid_H1aq14Os";
 const kinveyAppSecret = "329525a861524b64b93bc9c41250b4cf";
-const guestCredentials = "5c44e6b2-b3c2-44e4-b0dc-728aeea0511d.coe5Ff0awj1RziVcmso29/G58E79HR+Ek9OdkPwZQcE=";
+const guestCredentials = "117a96b4-bb77-4765-9425-4e891d64ffcf.AGAY3xcecHiiIQ9juFLyt7qA93DL6TyLTcSTOn6t7/g=";
 var currentlyLoggedUser = "";
 /*
 ------------------------------------------------------
