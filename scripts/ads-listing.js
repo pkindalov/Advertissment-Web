@@ -11,7 +11,7 @@ The following lines of code are for the constants such as kinvey credentials!
 const kinveyBaseUrl = "https://baas.kinvey.com/";
 const kinveyAppKey = "kid_H1aq14Os";
 const kinveyAppSecret = "329525a861524b64b93bc9c41250b4cf";
-const guestCredentials = "117a96b4-bb77-4765-9425-4e891d64ffcf.AGAY3xcecHiiIQ9juFLyt7qA93DL6TyLTcSTOn6t7/g=";
+const guestCredentials = "7ef6fe4d-7758-40bb-9aa2-a632cef9d98b.v4uzW2d03vHg4x71nnUD2BVVKocUpKHaMoR9jlUK+Js=";
 var currentlyLoggedUser = "";
 /*
 ------------------------------------------------------
@@ -142,6 +142,7 @@ function showMyAddsView() {
 
     const kinveyAuthHeaders = {
         'Authorization': "Kinvey " + sessionStorage.getItem('authToken'),
+
     };
 
    $('body').on("click", ".buttonEdit", editAdd);
