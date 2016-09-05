@@ -143,9 +143,9 @@
                   <div class="col-md-10">
                      <h1 onmousedown="whichButton(event, this);">Login</h1><br>
                          <p onmousedown="whichButton(event, this);">Username:</p>
-                            <input class="form-control" type="text" id="loginUser" required/>
+                            <input class="form-control" type="text" id="loginUser" required="required"/>
                          <p onmousedown="whichButton(event, this);">Password:</p>
-                            <input class="form-control" type="password" id="loginPassword" required/>
+                            <input class="form-control" type="password" id="loginPassword" required="required"/>
 
                         <div class="form-group">
                             <button class="btn btn-primary" type="submit"><img class="zoomInZooMOut" src="media/login.png" alt="login to site" />LOGIN</button>
@@ -161,11 +161,11 @@
                     <div class="col-md-10">
                         <h1 onmousedown="whichButton(event, this);">Register</h1><br>
                             <p onmousedown="whichButton(event, this);">Username:</p>
-                                <input class="form-control" type="text" id="registerUser" required/>
+                                <input class="form-control" type="text" id="registerUser" required="required"/>
                             <p onmousedown="whichButton(event, this);">Password:</p>
-                                <input class="form-control" type="password" id="registerPassword" required/>
+                                <input class="form-control" type="password" id="registerPassword" required="required"/>
                             <p onmousedown="whichButton(event, this);">Confirm Password:</p>
-                                <input class="form-control" type="password" id="confirmPassword" required/>
+                                <input class="form-control" type="password" id="confirmPassword" required="required"/>
 
                                 <div class="form-group">
                                     <button class="btn btn-primary" type="submit"><img class="zoomInZooMOut" src="media/register.png" alt="register" />REGISTER</button>
@@ -207,7 +207,7 @@
         <h1 onmousedown="whichButton(event, this);">Create a new Add</h1>
             <form id="formCreateAdd">
                 <div onmousedown="whichButton(event, this);"><strong>Title:</strong></div>
-                <div><input class="form-control" type="text" id="addTitle" required/></div>
+                <div><input class="form-control" type="text" id="addTitle" required="required"/></div>
 
                 <div onmousedown="whichButton(event, this);"><strong>Description:</strong></div>
                 <div><textarea class="form-control" style="width: 80%; min-width: 230px; margin-left: 10%;" id="addDescription" rows="20" cols="100" required></textarea></div>
@@ -220,16 +220,16 @@
     <section class="tab-pane fade in active" id="viewModifyAdd">
             <h1 onmousedown="whichButton(event, this);">Modify Add</h1>
             <form id="formModifyAdd">
-                <input type="hidden" id="addModifyId" required/>
+                <input type="hidden" id="addModifyId" required="required"/>
                 <div onmousedown="whichButton(event, this);"><strong>Title:</strong></div>
-                <div><input class="form-control" type="text" id="addModifyTitle" required/></div>
+                <div><input class="form-control" type="text" id="addModifyTitle" required="required"/></div>
 
                 <div onmousedown="whichButton(event, this);"><strong>Description:</strong></div>
                 <div><textarea class="form-control" style="width: 80%; min-width: 230px; margin-left: 10%;" id="addModifyDescription" rows="20" cols="100" required></textarea></div>
                 <div>
 
-                      <button class="btn btn-primary buttonsMargin tooltip" title="Click to edit current advertisment" onclick="modifyAdd()"><img class="zoomInZooMOut" src="media/edit.png" alt="modify post" />Modify</button>
-                     <button class="btn btn-success buttonsMargin tooltip" title="Click here to return in My advertisments page" onclick="redirectMyAdvert(event)"><img class="zoomInZooMOut" src="media/back.png" alt="back button" />Back</button>
+                      <button style="margin-left: 36%;" class="btn btn-primary buttonsMargin tooltip" title="Click to edit current advertisment" onclick="modifyAdd()"><img class="zoomInZooMOut" src="media/edit.png" alt="modify post" />Modify</button>
+                     <button style="margin-left: 48%;" class="btn btn-success buttonsMargin tooltip" title="Click here to return in My advertisments page" onclick="redirectMyAdvert(event)"><img class="zoomInZooMOut" src="media/back.png" alt="back button" />Back</button>
                 </div>
             </form>
     </section>
