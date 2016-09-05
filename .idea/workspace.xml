@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc318149-b61d-4622-8cbd-45f994390615" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/ads-listing.js" afterPath="$PROJECT_DIR$/scripts/ads-listing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/site.css" afterPath="$PROJECT_DIR$/styles/site.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="Advertissment-Web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,7 +25,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ads-listing.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ads-listing.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/ads-listing.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="662">
@@ -42,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+            <state relative-caret-position="373">
+              <caret line="36" column="63" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#div#4;n#form#0;n#section#9;n#main#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#1;n#div#4;n#form#0;n#section#9;n#main#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -73,9 +72,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/styles/site.css" />
         <option value="$PROJECT_DIR$/scripts/ads-listing.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -236,12 +235,12 @@
       <workItem from="1473090079444" duration="27000" />
       <workItem from="1473090142158" duration="125000" />
       <workItem from="1473090288919" duration="182000" />
-      <workItem from="1473090722616" duration="7732000" />
+      <workItem from="1473090722616" duration="8531000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11799000" />
+    <option name="totallyTimeSpent" value="12598000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="24" width="1377" height="876" extended-state="6" />
@@ -406,17 +405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#4;n#form#0;n#section#9;n#main#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#div#4;n#form#0;n#section#9;n#main#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/site.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -435,6 +423,17 @@
             <marker date="1473116377606" expanded="true" signature="8954:8971" ph="..." />
             <marker date="1473116377606" expanded="true" signature="23533:23579" ph="..." />
             <marker date="1473116377606" expanded="true" signature="27214:27231" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="36" column="63" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#4;n#form#0;n#section#9;n#main#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#4;n#form#0;n#section#9;n#main#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
