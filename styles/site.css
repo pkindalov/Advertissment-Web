@@ -28,7 +28,7 @@ body{
     font-style: oblique;
     /*border: 1px solid red;*/
     color: #3C5B9B;
-    height: 100px;
+    height: auto;
     overflow: hidden;
     margin-top: 80px;
     margin-bottom: 20px;
