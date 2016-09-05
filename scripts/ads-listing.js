@@ -644,6 +644,47 @@ function printLongDiv(divName) {
 }
 
 
+
+
+function quotes(){
+
+
+    var quotes = [
+        "My mother said to me, \"If you are a soldier, you will become a general. If you are a monk, you will become the Pope.\"  Instead, I was a painter, and became Picasso. -- Pablo Picasso.",
+
+        "Murphy\'s Fourth Law: If there is a possibility of several things going wrong, the one that will cause the most damage will be the one to go wrong.",
+
+        "\"If you live long enough, you\'ll see that every victory turns into a defeat.\" -- Simone de Beauvoir",
+
+        "\"The purpose of law is to prevent the strong from always having their way.\" -- Ovid ",
+
+        "\"Patriotism means to stand by the country. It does not mean to stand by the president or any other public official...\"  -- Theodore Roosevelt",
+
+        "\"Politicians are like diapers. They should be changed often, and for the same reason.\"-- Anonymous",
+
+        "My opinions might have changed, but not the fact that I am right.",
+
+        "\"Chaos is found in greatest abundance wherever order is being sought. It always defeats order, because it is better organized.\" -- Terry Pratchett (Interesting Times)"
+    ];
+
+
+    //var randNum = Math.floor(Math.Rand() * quotes.length);
+    var randNum = Math.floor((Math.random() * quotes.length));
+
+    //alert(quotes[randNum]);
+    $('.quotes').html('<p onclick="quotes()">' + quotes[randNum] + '</p>');
+
+}
+
+
+
+
+
+
+
+
+
+
 function listAdds() {
     $('#AllAdds').empty();
     $('#page-selectionAllAdds').empty();

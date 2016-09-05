@@ -30,6 +30,9 @@
             $('.tooltip').tooltipster({
 
             });
+
+
+            quotes();
         });
    </script>
 
@@ -42,7 +45,7 @@
 <div class="container">
 <header id="menu">
     <ul class="nav nav-tabs" id="navMenu">
-        <li> <a data-toggle="tab" class="tooltip" title="Main page of site" href="#" id="linkHome">
+        <li> <a onclick="quotes()" data-toggle="tab" class="tooltip" title="Main page of site" href="#" id="linkHome">
         	<span><img class="topMenuIcons" src="media/earth-grid.png" alt="home" /></span>
         	HOME
        		 </a></li>
@@ -75,7 +78,7 @@
         <section class="alert alert-info" id="loadingBox">Loading...</section>
         <section class="alert alert-success" id="infoBox" onclick='$(this).fadeOut()'>Info</section>
         <section class="alert alert-danger" id="errorBox" onclick='$(this).fadeOut()'>Error</section>
-        <section onmousedown="whichButton(event, this);" class="tab-pane fade in active" id="viewHome">
+        <section class="tab-pane fade in active" id="viewHome">
 
 
         <h1 id="greetingsHeading">Greetings</h1>
@@ -91,6 +94,12 @@
            Promote your ads on our site. Reach new audiences.
            It's fast and easy to get started. Select the product you want to advertise and start your campaign!
         </p>
+
+
+        <div class="quotes">
+            <button onclick="quotes(this)">Quote</button>
+        </div>
+
 
         <a href="#"  onclick="magnifieText('viewHome')">
           <img class="zoomInZooMOut tooltip" style="margin-left: 50%;" title="Increase font size of text" src="media/zoom-in.png" alt="zoom text" />

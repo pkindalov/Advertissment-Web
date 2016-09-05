@@ -22,6 +22,27 @@ body{
     margin-right: 6px;
 }
 
+.quotes{
+    width: 100%;
+    font-size: 0.8em;
+    font-style: oblique;
+    /*border: 1px solid red;*/
+    color: #3C5B9B;
+    height: 100px;
+    overflow: hidden;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    white-space: pre-wrap;      /* CSS3 */
+    white-space: -moz-pre-wrap; /* Firefox */
+    white-space: -pre-wrap;     /* Opera <7 */
+    white-space: -o-pre-wrap;   /* Opera 7 */
+    word-wrap: break-word;      /* IE */
+}
+
+.quotes p{
+    padding: 10px;
+}
+
 #share-buttons img {
 width: 35px;
 padding: 5px;
