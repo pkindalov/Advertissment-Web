@@ -657,7 +657,13 @@ function advertQuotes(){
 
 
     var advertizingQuotes = [
-        "My mother said to me, \"If you are a soldier, you will become a general. If you are a monk, you will become the Pope.\"  Instead, I was a painter, and became Picasso. -- Pablo Picasso.",
+        "\"We need to stop interrupting what people are interested in & be what people are interested in.\" -- Craig Davis",
+
+        "\"Nobody counts the number of ads you run; they just remember the impression you make.\" -- Bill Bernbach",
+
+        "\"Nobody reads ads. People read what interests them, and sometimes it’s an ad.\" -- Howard Luck Gossage",
+
+        "\"The only people who care about advertising are the people who work in advertising.\" -- George Parker"
 
 
 
@@ -668,7 +674,7 @@ function advertQuotes(){
     var randNum = Math.floor((Math.random() * advertizingQuotes.length));
 
     //alert(quotes[randNum]);
-    $('.quotes').html('<p onclick="quotes()">' + advertizingQuotes[randNum] + ' </p>');
+    $('.advertQuotes').html('<p onclick="advertQuotes()">' + advertizingQuotes[randNum] + ' </p>');
 
 }
 

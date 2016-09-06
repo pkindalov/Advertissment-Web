@@ -34,6 +34,7 @@
 
 
             quotes();
+            advertQuotes();
 
             var i = setInterval(function() { quotes(); }, 60000);
         });
@@ -88,6 +89,8 @@
 
 
         <h3><em>Welcome to <u>Publications</u> advertising web</em></h3><br>
+
+            <div class="advertQuotes"></div>
         <p>Here you can post for <strong><u>free</u></strong> everything that you want to sell/buy. Just login into your account and
            click the <strong>New Advertisment</strong> link. If you are not in our system, you can still browse the collection
            of advertisments our other users have. Enjoy your stay!</p><br>
@@ -99,9 +102,7 @@
         </p>
 
 
-        <div class="quotes">
-
-        </div>
+        <div class="quotes"></div>
 
         <div class="editButton">
             <button class="btn btn-primary" onclick="copyElementByClass('quotes')" >Copy Quote</button>

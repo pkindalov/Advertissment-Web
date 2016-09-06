@@ -22,7 +22,7 @@ body{
     margin-right: 6px;
 }
 
-.quotes{
+.quotes, .advertQuotes{
     width: 100%;
     font-size: 0.8em;
     font-style: oblique;
@@ -37,6 +37,11 @@ body{
     white-space: -pre-wrap;     /* Opera <7 */
     white-space: -o-pre-wrap;   /* Opera 7 */
     word-wrap: break-word;      /* IE */
+}
+
+.advertQuotes{
+    /*border: 1px solid red;*/
+    margin-top: -30px;
 }
 
 .editButton{
