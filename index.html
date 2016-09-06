@@ -99,15 +99,21 @@
 
 
         <div class="quotes">
-            <button onclick="quotes(this)">Quote</button>
+            <!--<button onclick="quotes(this)">Quote</button>-->
+            <!--<button class="btn btn-primary" onclick="copyElementByClass(quotes)">Copy</button>-->
+        </div>
+
+        <div class="editButton">
+            <button onclick="copyElementByClass('quotes')" class="btn btn-primary">Copy Quote</button>
         </div>
 
 
+
         <a href="#"  onclick="magnifieText('viewHome')">
-          <img class="zoomInZooMOut tooltip" style="margin-left: 50%;" title="Increase font size of text" src="media/zoom-in.png" alt="zoom text" />
+          <img style="margin-left: 45%" class="zoomInZooMOut tooltip" style="margin-left: 50%;" title="Increase font size of text" src="media/zoom-in.png" alt="zoom text" />
         </a>
         <a href="#"  onclick="decreaseText('viewHome')">
-          <img class="zoomInZooMOut tooltip" style="margin-left: 47%;" title="Decrease font size" src="media/zoom-out.png" alt="zoom text" />
+          <img style="margin-left: 48%" class="zoomInZooMOut tooltip" style="margin-left: 47%;" title="Decrease font size" src="media/zoom-out.png" alt="zoom text" />
         </a>
         </section>
 

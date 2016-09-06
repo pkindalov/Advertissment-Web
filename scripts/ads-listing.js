@@ -606,6 +606,13 @@ function copyLongPosts(postId){
 
 }
 
+function copyElementByClass(element){
+
+     let target = '.' + element;
+     let text = $(target + " p" ).text();
+     window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+}
+
 function printDiv(divName) {
 
         let divToPrint = '#' + divName.id;
@@ -712,7 +719,7 @@ function quotes(){
     var randNum = Math.floor((Math.random() * quotes.length));
 
     //alert(quotes[randNum]);
-    $('.quotes').html('<p onclick="quotes()">' + quotes[randNum] + '</p>');
+    $('.quotes').html('<p onclick="quotes()">' + quotes[randNum] + ' </p>');
 
 }
 

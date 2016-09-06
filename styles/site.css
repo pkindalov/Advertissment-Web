@@ -39,6 +39,10 @@ body{
     word-wrap: break-word;      /* IE */
 }
 
+.editButton{
+    margin-bottom: 2%;
+}
+
 .quotes p{
     padding: 10px;
 }
