@@ -723,8 +723,19 @@ function listAdds() {
                     let singleFullText = $('<p class="full">').html(fullText);
 
 
+
+
                     let postId = add._id;
-                    let zoomIn = $('<button class="zoomInZoomOutButtons btn btn-success" onclick="magnifieTextPost(this)"><img class="zoomInZooMOut" src="media/zoom-in.png" alt="zoom in text" />Zoom in</button>').attr('id', postId);
+
+
+
+                let quotesDiv = $('<div class="advertQuotesPosts">');
+                let quotebutton = $('<button class="zoomInZoomOutButtons btn btn-success" onclick="advertQuotesPosts(this);"><img class="zoomInZooMOut" src="media/zoom-in.png" alt="zoom in text" />Quote</button>').attr('id', postId);
+
+
+
+
+                let zoomIn = $('<button class="zoomInZoomOutButtons btn btn-success" onclick="magnifieTextPost(this)"><img class="zoomInZooMOut" src="media/zoom-in.png" alt="zoom in text" />Zoom in</button>').attr('id', postId);
                     let zoomOut = $('<button class="zoomInZoomOutButtons btn btn-success" onclick="decreaseTextPost(this)"><img class="zoomInZooMOut" src="media/zoom-out.png" alt="zoom out text" />Zoom out</button>').attr('id', postId);
 
                     let readMore = $('<button class="readMore btn btn-success" onclick="readMore(this)"><img class="zoomInZooMOut" src="media/cursor.png" alt="read more icon" />Read More..</button>').attr('id', postId);
@@ -741,7 +752,7 @@ function listAdds() {
 
 
 
-                        singleAdd = [singleAddHeading,singleAddAuthor,singleFullText, zoomIn, zoomOut, copyButton, printButton];
+                        singleAdd = [singleAddHeading,singleAddAuthor,singleFullText, zoomIn, zoomOut, copyButton, printButton, quotebutton, quotesDiv];
 
 
                     }else{
