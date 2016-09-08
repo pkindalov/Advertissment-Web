@@ -729,8 +729,8 @@ function listAdds() {
 
 
 
-                let quotesDiv = $('<div class="advertQuotesPosts">');
-                let quotebutton = $('<button class="zoomInZoomOutButtons btn btn-success" onclick="advertQuotesPosts(this);"><img class="zoomInZooMOut" src="media/zoom-in.png" alt="zoom in text" />Quote</button>').attr('id', postId);
+                // let quotesDiv = $('<div class="advertQuotesPosts">');
+                // let quotebutton = $('<button class="zoomInZoomOutButtons btn btn-success" onclick="advertQuotesPosts(this);"><img class="zoomInZooMOut" src="media/zoom-in.png" alt="zoom in text" />Quote</button>').attr('id', postId);
 
 
 
@@ -747,6 +747,9 @@ function listAdds() {
                     if(fullText.length <= 50){
                         singleFullText = $('<p class="short">').html(fullText);
 
+                        let quotesDiv = $('<div class="advertQuotesPosts">');
+                        let quotebutton = $('<button class="zoomInZoomOutButtons btn btn-success" onclick="advertQuotesPosts(this);"><img class="zoomInZooMOut" src="media/zoom-in.png" alt="zoom in text" />Quote</button>').attr('id', postId);
+
                         let copyButton = $('<button class="copyButton btn btn-success" onclick="copy(this)"><img class="zoomInZooMOut" src="media/copy.png" alt="hide text" />Copy</button>').attr('id', postId);
                         let printButton = $('<button class="copyButton btn btn-success" onclick="printDiv(this)"><img class="zoomInZooMOut" src="media/printer.png" alt="hide text" />Print</button>').attr('id', postId);
 
@@ -758,10 +761,17 @@ function listAdds() {
                     }else{
                         shortTxt = add.description.substring(0, 51);
                         singleAddText = $('<p class="short">').html(shortTxt + "...");
+
+
+                        let quotesDiv = $('<div class="quotesPost">');
+                        let quotebutton = $('<button class="zoomInZoomOutButtons btn btn-success" onclick="quotesPosts(this);"><img class="zoomInZooMOut" src="media/zoom-in.png" alt="zoom in text" />Quote</button>').attr('id', postId);
+
+
+
                         let copyButton = $('<button class="copyButton btn btn-success" onclick="copyLongPosts(this)"><img class="zoomInZooMOut" src="media/copy.png" alt="hide text" />Copy</button>').attr('id', postId);
                         let printButton = $('<button class="copyButton btn btn-success" onclick="printLongDiv(this)"><img class="zoomInZooMOut" src="media/printer.png" alt="hide text" />Print</button>').attr('id', postId);
 
-                        singleAdd = [singleAddHeading,singleAddAuthor,singleAddText, singleFullText, readMore, hideText, zoomIn, zoomOut, copyButton, printButton];
+                        singleAdd = [singleAddHeading,singleAddAuthor,singleAddText, singleFullText, readMore, hideText, zoomIn, zoomOut, copyButton, printButton, quotebutton, quotesDiv];
                     }
 
 
