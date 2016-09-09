@@ -155,6 +155,7 @@ main>section{
     font-size: 1.6em;
 }
 
+
 section h1{
     margin:10px 0px;
     font-size: 2.1em;
@@ -164,9 +165,11 @@ section>p{
     font-size: 0.7em;
 }
 
+
 section#viewHome p{
     margin-top: 4%;
 }
+
 
 #infobox, #errorBox, #loadingBox{
     width: 80%;
@@ -201,6 +204,16 @@ footer{
 .page{
 	display:none;
 }
+
+.loggedUser{
+    color: #EC971F;
+    border-color: #EC971F;
+}
+
+.luckyWishes{
+    color: #EC971F;
+}
+
 #page-1{
 	display:block;
 }
