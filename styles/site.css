@@ -39,7 +39,7 @@ body{
     word-wrap: break-word;      /* IE */
 }
 
-.advertQuotes{
+.advertQuotes, .quotesPost {
     /*border: 1px solid red;*/
     margin-top: -20px;
     color: #449D44;
