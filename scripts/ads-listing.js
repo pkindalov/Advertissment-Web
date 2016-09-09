@@ -36,6 +36,10 @@ function showHideMenuLinks() {
         $("#linkListAdds").show();
         $("#linkCreateAdd").hide();
         $("#linkLogout").hide();
+
+        $('.loggedUser').hide();
+        $('.luckyWishes').hide();
+        $('.luckyButton').hide();
     }
     else{
         $("#linkLogin").hide();
@@ -44,6 +48,10 @@ function showHideMenuLinks() {
         $("#linkListAdds").show();
         $("#linkCreateAdd").show();
         $("#linkLogout").show();
+
+        $('.loggedUser').show();
+        $('.luckyWishes').show();
+        $('.luckyButton').show();
     }
 
 }
@@ -63,6 +71,7 @@ $(function () {
 
     showHideMenuLinks();
     showView('viewHome');
+
 
     currentlyLoggedUser = localStorage.getItem('username');
     if(currentlyLoggedUser != null){ $('#greetingsHeading').html("Greetings, " + "<span class='helloUsername'>"+ currentlyLoggedUser + "</span>");}
@@ -94,18 +103,33 @@ $(function () {
         e.preventDefault();
         modifyAdd();
     });
+
+
+
     $(document).on({
         ajaxStart: function(){ $("#loadingBox").show()},
         ajaxStop: function() { $("#loadingBox").hide()}
+
+
     });
+
+
 
 })
 
 function showHomeView() {
     showView('viewHome');
 
-    if(currentlyLoggedUser != null){ $('#greetingsHeading').html("Greetings, " + "<span class='helloUsername'>"+ currentlyLoggedUser + "</span>");}
-    else{$('#greetingsHeading').text("Greetings");}
+
+
+    if(currentlyLoggedUser != null){
+        $('#greetingsHeading').html("Greetings, " + "<span class='helloUsername'>"+ currentlyLoggedUser + "</span>");
+
+    }
+    else{
+        $('#greetingsHeading').text("Greetings");
+
+    }
 
 }
 function showAboutView() {
@@ -389,11 +413,13 @@ function register() {
 }
 
 function logout() {
+
     sessionStorage.clear();
     localStorage.clear();
     showHideMenuLinks();
     showView('viewHome');
     location.reload();
+   
 }
 
 /*
