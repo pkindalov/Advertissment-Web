@@ -89,6 +89,12 @@ display: inline;
     font-weight: normal;
 }
 
+.contacts, .map{
+    margin-top: 7%;
+}
+
+
+
 .video{
     position: fixed;
     top: 50%; left: 50%;
