@@ -158,8 +158,9 @@ function advertQuotesPosts(postId) {
     var randNum = Math.floor((Math.random() * advertizingQuotes.length));
 
     //alert(quotes[randNum]);
-    $(elementById + ' .advertQuotesPosts').html('<p onclick="advertQuotesPosts(\' + elementById + \')">' + advertizingQuotes[randNum] + ' </p>');
+    $(elementById + ' .advertQuotesPosts').html('<p>' + advertizingQuotes[randNum] + ' </p>');
 }
+
 
 
 
