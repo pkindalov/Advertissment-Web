@@ -45,6 +45,10 @@ body{
     color: #449D44;
 }
 
+.quotesPost{
+    margin-top: 30px;
+}
+
 .editButton{
     margin-bottom: 2%;
 }

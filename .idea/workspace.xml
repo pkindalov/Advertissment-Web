@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc318149-b61d-4622-8cbd-45f994390615" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/advertQuotes.js" afterPath="$PROJECT_DIR$/scripts/advertQuotes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/quotes.js" afterPath="$PROJECT_DIR$/scripts/quotes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/site.css" afterPath="$PROJECT_DIR$/styles/site.css" />
     </list>
     <ignored path="Advertissment-Web.iws" />
@@ -44,7 +41,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="quotes.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="quotes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/quotes.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="666">
@@ -82,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="site.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="site.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/styles/site.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+            <state relative-caret-position="1320">
+              <caret line="97" column="17" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -110,8 +107,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/scripts/advertQuotes.js" />
         <option value="$PROJECT_DIR$/scripts/ads-listing.js" />
-        <option value="$PROJECT_DIR$/styles/site.css" />
         <option value="$PROJECT_DIR$/scripts/quotes.js" />
+        <option value="$PROJECT_DIR$/styles/site.css" />
       </list>
     </option>
   </component>
@@ -277,12 +274,12 @@
       <workItem from="1473196364672" duration="5891000" />
       <workItem from="1473286687845" duration="5440000" />
       <workItem from="1473407220911" duration="10000" />
-      <workItem from="1473407265143" duration="814000" />
+      <workItem from="1473407265143" duration="1217000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27530000" />
+    <option name="totallyTimeSpent" value="27933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="24" width="1377" height="876" extended-state="7" />
@@ -690,14 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/site.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/advertQuotes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="741">
@@ -712,6 +701,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="666">
           <caret line="147" column="18" selection-start-line="147" selection-start-column="18" selection-end-line="147" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="97" column="17" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
           <folding />
         </state>
       </provider>
