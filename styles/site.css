@@ -24,7 +24,7 @@ body{
 
 .quotes, .advertQuotes, .advertQuotesPosts{
     width: 100%;
-    font-size: 0.8em;
+    /*font-size: 0.8em;*/
     font-style: oblique;
     /*border: 1px solid red;*/
     color: #3C5B9B;
@@ -43,6 +43,7 @@ body{
     /*border: 1px solid red;*/
     margin-top: -20px;
     color: #449D44;
+    font-style: oblique;
 }
 
 .quotesPost{
