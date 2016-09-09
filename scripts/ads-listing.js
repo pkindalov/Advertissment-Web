@@ -40,6 +40,8 @@ function showHideMenuLinks() {
         $('.loggedUser').hide();
         $('.luckyWishes').hide();
         $('.luckyButton').hide();
+        $('.advertQuotes').hide();
+        $('.loggedUserButton').hide();
     }
     else{
         $("#linkLogin").hide();
@@ -52,6 +54,8 @@ function showHideMenuLinks() {
         $('.loggedUser').show();
         $('.luckyWishes').show();
         $('.luckyButton').show();
+        $('.advertQuotes').show();
+        $('.loggedUserButton').show();
     }
 
 }
@@ -419,7 +423,7 @@ function logout() {
     showHideMenuLinks();
     showView('viewHome');
     location.reload();
-   
+
 }
 
 /*
