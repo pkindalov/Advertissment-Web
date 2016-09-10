@@ -43,6 +43,7 @@ function showHideMenuLinks() {
         $('.advertQuotes').hide();
         $('.loggedUserButton').hide();
         $('.quotes').hide();
+
     }
     else{
         $("#linkLogin").hide();
@@ -58,6 +59,7 @@ function showHideMenuLinks() {
         $('.advertQuotes').show();
         $('.loggedUserButton').show();
         $('.quotes').show();
+
     }
 
 }
