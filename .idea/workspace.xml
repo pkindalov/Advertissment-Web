@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc318149-b61d-4622-8cbd-45f994390615" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/luckyWishes.js" afterPath="$PROJECT_DIR$/scripts/luckyWishes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/quotes.js" afterPath="$PROJECT_DIR$/scripts/quotes.js" />
     </list>
     <ignored path="Advertissment-Web.iws" />
@@ -58,8 +56,8 @@
       <file leaf-file-name="quotes.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/quotes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="64" column="179" selection-start-line="64" selection-start-column="179" selection-end-line="64" selection-end-column="179" />
+            <state relative-caret-position="606">
+              <caret line="76" column="98" selection-start-line="76" selection-start-column="98" selection-end-line="76" selection-end-column="98" />
               <folding />
             </state>
           </provider>
@@ -307,15 +305,15 @@
       <workItem from="1473430159667" duration="3175000" />
       <workItem from="1473444201111" duration="321000" />
       <workItem from="1473454000946" duration="12369000" />
-      <workItem from="1473541390223" duration="201000" />
+      <workItem from="1473541390223" duration="536000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49775000" />
+    <option name="totallyTimeSpent" value="50110000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="63" y="24" width="1377" height="876" extended-state="6" />
+    <frame x="63" y="24" width="1377" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23819898" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -980,8 +978,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/quotes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="64" column="179" selection-start-line="64" selection-start-column="179" selection-end-line="64" selection-end-column="179" />
+        <state relative-caret-position="606">
+          <caret line="76" column="98" selection-start-line="76" selection-start-column="98" selection-end-line="76" selection-end-column="98" />
           <folding />
         </state>
       </provider>

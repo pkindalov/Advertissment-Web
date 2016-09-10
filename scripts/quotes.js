@@ -62,7 +62,19 @@ function quotes(){
 
         "Life is a game, which is not always fair; however, if you play with heart and give it your best shot, you are going to win in the end.",
 
-        "Life is like a road that has no u-turns, you can only move forward but can never go back, so enjoy every moment of your life because it will never come back to you again."
+        "Life is like a road that has no u-turns, you can only move forward but can never go back, so enjoy every moment of your life because it will never come back to you again.",
+
+        "Life is a book and every day that we live is a new page, so paint every page of your life with amazing colors of good deeds and amazing adventures.",
+
+        "Life can be unforgiving sometimes and might make it hard for you to breathe but always remember that people who tackle life and its misfortunes head on are always the ones that are able to conquer it.",
+
+        "Life is like an ice cream that is melting all the time, so enjoy every moment of it until is completely melts.",
+
+        "Your life is beautiful if the people around you are happy because of you.",
+
+        "Life is not easy but if you persevere and show a never die attitude; you can make life a lot easier for yourself.",
+
+        "The biggest suspense of life is that we know who we want but we do not know who wants us."
 
 
     ];
