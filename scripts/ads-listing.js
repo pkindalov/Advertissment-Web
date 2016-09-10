@@ -659,7 +659,13 @@ function copyElementByClass(element){
 
      let target = '.' + element;
      let text = $(target + " p" ).text();
-     window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+
+     if(text == ""){
+         alert("You must click first on button for quote or wish.");
+     }else {
+         window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+     }
+
 }
 
 function printDiv(divName) {
