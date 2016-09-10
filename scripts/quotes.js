@@ -58,7 +58,11 @@ function quotes(){
 
         "\"Health is the greatest gift, contentment the greatest wealth, faithfulness the best relationship.\" -- Buddha",
 
-        "\"Put your heart, mind, and soul into even your smallest acts. This is the secret of success.\" -- Swami Sivananda"
+        "\"Put your heart, mind, and soul into even your smallest acts. This is the secret of success.\" -- Swami Sivananda",
+
+        "Life is a game, which is not always fair; however, if you play with heart and give it your best shot, you are going to win in the end.",
+
+        "Life is like a road that has no u-turns, you can only move forward but can never go back, so enjoy every moment of your life because it will never come back to you again."
 
 
     ];

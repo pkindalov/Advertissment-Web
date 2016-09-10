@@ -35,7 +35,15 @@ function luckyWish(){
 
       "The sweetest things in life are love and happiness. Wishing you good luck now that you have found that.",
 
-      "My heart is flowing with joy at knowing that good luck has finally fallen upon your doorstep."
+      "My heart is flowing with joy at knowing that good luck has finally fallen upon your doorstep.",
+
+      "I find my heart singing a chorus at your happy news. Good luck to you during this joyous time.",
+
+      "Smile knowing that good luck has finally found you. Wishing you plenty of joy, happiness, and health.",
+
+      "The good luck you have made for yourself is an inspiration to many. May it continue throughout your life.",
+
+      "Good luck to you and remember to keep your head up high for all the days of your beautiful and wonderful life."
     ];
 
 
