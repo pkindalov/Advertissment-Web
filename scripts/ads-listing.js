@@ -22,8 +22,9 @@ view functions!
  */
 
 function showView(viewName) {
-    $('main>section').hide();
-    $('#' + viewName).show();
+    $('main>section').fadeOut("slow");
+    $('#' + viewName).fadeIn("slow");
+
 }
 
 function showHideMenuLinks() {
