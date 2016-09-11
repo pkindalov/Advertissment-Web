@@ -645,13 +645,21 @@ function decreaseTextPost(postId){
 function copy(postId){
      let target = '#' + postId.id;
      let text = $(target + " p:nth-child(3)" ).text();
-     window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+     if(text == ""){
+        alert("You must click first on button for quote or wish.");
+     }else {
+        window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+     }
 }
 
 function copyLongPosts(postId){
      let target = '#' + postId.id;
      let text = $(target + " p:nth-child(4)" ).text();
-     window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+     if(text == ""){
+        alert("You must click first on button for quote or wish.");
+     }else {
+        window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+     }
 
 }
 
