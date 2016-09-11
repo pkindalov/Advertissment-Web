@@ -927,16 +927,16 @@ function createAdd() {
 }
 
 function modifyAdd() {
-    var id = $('#addModifyId').val();
+    var id = escapeHtml($('#addModifyId').val());
     const kinveyAddsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey+ "/Advertisments/"+id;
     const kinveyAuthHeaders = {
         'Authorization': "Kinvey " + sessionStorage.getItem('authToken'),
     };
 
     let addData = {
-        title: $('#addModifyTitle').val(),
+        title: escapeHtml($('#addModifyTitle').val()),
         author: currentlyLoggedUser,
-        description: $('#addModifyDescription').val()
+        description: escapeHtml($('#addModifyDescription').val())
     }
 
     $.ajax({
