@@ -714,6 +714,14 @@ function printLongDiv(divName) {
 }
 
 
+function escapeHtml(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
 
 
 
@@ -869,7 +877,7 @@ function createAdd() {
       'Authorization': "Kinvey " + sessionStorage.getItem('authToken'),
     };
 
-    let authorTitle = $('#addTitle').val();
+    let authorTitle = escapeHtml($('#addTitle').val());
 
     function validateForm() {
         if(authorTitle.length <= 3){
@@ -885,9 +893,9 @@ function createAdd() {
     }
 
     let addData = {
-        title: $('#addTitle').val(),
+        title: escapeHtml($('#addTitle').val()),
         author: currentlyLoggedUser,
-        description: $('#addDescription').val(),
+        description: escapeHtml($('#addDescription').val()),
         from_date: new Date()
     }
 
