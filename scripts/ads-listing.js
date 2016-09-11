@@ -287,7 +287,7 @@ function showMyAddsView() {
 				}
 				for(var index = 0; index< pages.length; index++){
 					$('#myAdds').append(pages[index]);
-					$('#page-selection').append('<button class="btn btn-success" style="margin-top: 10px;" onClick="showPage(' + (index+1) + ')">' + (index+1) + '</button>');
+					$('#page-selection').append('<button style="padding-left: 10px;" class="btn btn-success pagination" style="margin-top: 10px;" onClick="showPage(' + (index+1) + ')">' + (index+1) + '</button>');
 				}
 			}
         }
@@ -844,10 +844,12 @@ function listAdds() {
 
                     pages[pageIndex].append(adds);
 
+
+
             }
             for(var index = 0; index< pages.length; index++){
                 $('#AllAdds').append(pages[index]);
-                $('#page-selectionAllAdds').append('<button class="btn btn-success" style="margin-top: 10px;" onClick="showPage(' + (index+1) + ')">' + (index+1) + '</button>');
+                $('#page-selectionAllAdds').append('<button style="padding-left: 10px;" class="btn btn-success pagination" style="margin-top: 10px;" onClick="showPage(' + (index+1) + ')">' + (index+1) + '</button>');
             }
 
         }
