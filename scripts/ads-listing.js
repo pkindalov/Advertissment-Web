@@ -311,8 +311,8 @@ function login() {
         'Authorization': "Basic " + btoa(kinveyAppKey + ":" + kinveyAppSecret),
     };
     let userData = {
-        username: $('#loginUser').val(),
-        password: $('#loginPassword').val()
+        username: escapeHtml($('#loginUser').val()),
+        password: escapeHtml($('#loginPassword').val())
     };
     $.ajax({
         method: "POST",
@@ -355,9 +355,9 @@ function register() {
         'Authorization': "Basic " + btoa(kinveyAppKey + ":" + kinveyAppSecret),
     };
 
-    let userName = $('#registerUser').val();
-    let password = $('#registerPassword').val();
-    let confirm = $('#confirmPassword').val();
+    let userName = escapeHtml($('#registerUser').val());
+    let password = escapeHtml($('#registerPassword').val());
+    let confirm = escapeHtml($('#confirmPassword').val());
 
     function validateForm() {
         if(userName.length <= 3){
@@ -365,7 +365,7 @@ function register() {
             return false;
         }
 
-        if(!userName[0].match(/[a-z]/)){
+        if(!userName[0].match(/[a-zA-Z]/)){
             showErrorMsg("Username can`t begin with digit.");
             return false;
         }
@@ -400,8 +400,8 @@ function register() {
 
 
     let userData = {
-        username: $('#registerUser').val(),
-        password: $('#registerPassword').val()
+        username: userName,
+        password: password
     };
     $.ajax({
         method: "POST",
