@@ -831,7 +831,9 @@ function listAdds() {
                     if(fullText.length <= 50){
                         singleFullText = $('<p class="short">').html(fullText);
 
-                        let quotesDiv = $('<div class="advertQuotesPosts">');
+
+                        let randQuote  = RandomQuote();
+                        let quotesDiv = $('<div class="advertQuotesPosts">' + '<p>' + randQuote + '</p>');
                         let quotebutton = $('<button class="zoomInZoomOutButtons btn btn-success" onclick="advertQuotesPosts(this);"><img class="zoomInZooMOut" src="media/quotes.png" alt="quotes button" />Quote</button>').attr('id', postId);
 
                         let copyButton = $('<button class="copyButton btn btn-success" onclick="copy(this)"><img class="zoomInZooMOut" src="media/copy.png" alt="hide text" />Copy</button>').attr('id', postId);
