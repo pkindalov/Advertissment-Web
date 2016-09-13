@@ -34,6 +34,8 @@
 
             });
 
+            localStorage.clear();
+
 
 
             quotes();
@@ -268,6 +270,25 @@
                      <button style="margin-left: 48%;" class="btn btn-success buttonsMargin tooltip" title="Click here to return in My advertisments page" onclick="redirectMyAdvert(event)"><img class="zoomInZooMOut" src="media/back.png" alt="back button" />Back</button>
                 </div>
             </form>
+    </section>
+
+
+
+    <section class="tab-pane fade in active" id="viewModifyAddAdmin">
+        <h1 onmousedown="whichButton(event, this);">Modify Add</h1>
+        <form id="formModifyAddAdmin">
+            <input type="hidden" id="addModifyIdAdmin" required="required"/>
+            <div onmousedown="whichButton(event, this);"><strong>Title:</strong></div>
+            <div><input class="form-control" type="text" id="addModifyTitleAdmin" required="required"/></div>
+
+            <div onmousedown="whichButton(event, this);"><strong>Description:</strong></div>
+            <div><textarea class="form-control" style="width: 80%; min-width: 230px; margin-left: 10%;" id="addModifyDescriptionAdmin" rows="20" cols="100" required></textarea></div>
+            <div>
+
+                <button style="margin-left: 36%;" class="btn btn-primary buttonsMargin tooltip" title="Click to edit current advertisment" onclick="modifyAddAdmin()"><img class="zoomInZooMOut" src="media/edit.png" alt="modify post" />Modify</button>
+                <button style="margin-left: 48%;" class="btn btn-success buttonsMargin tooltip" title="Click here to return in My advertisments page" onclick="redirectMyAdvert(event)"><img class="zoomInZooMOut" src="media/back.png" alt="back button" />Back</button>
+            </div>
+        </form>
     </section>
 </main>
 
