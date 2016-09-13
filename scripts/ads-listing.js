@@ -87,9 +87,14 @@ $(function () {
     showView('viewHome');
 
 
+
     currentlyLoggedUser = localStorage.getItem('username');
-    if(currentlyLoggedUser != null){ $('#greetingsHeading').html("Greetings, " + "<span class='helloUsername'>"+ currentlyLoggedUser + "</span>");}
-    else{$('#greetingsHeading').text("Greetings");}
+    if(currentlyLoggedUser != null){ $('#greetingsHeading').html("Greetings, " + "<span class='helloUsername'>"+ currentlyLoggedUser + "</span>");
+
+    }
+
+
+
 
     $('#linkHome').click(showHomeView);
     $('#linkAbout').click(showAboutView);
@@ -166,6 +171,10 @@ function showCreateAddView() {
 
 function showModifyAddView() {
     showView('viewModifyAdd');
+}
+
+function showModifyAddViewAdmin() {
+    showView('viewModifyAddAdmin');
 }
 
 /*Here we get the entire collection of advertisments posted by all users and in the loadSuccess function we select those whose
@@ -751,6 +760,16 @@ function listAdds() {
     $('#AllAdds').empty();
     $('#page-selectionAllAdds').empty();
 
+
+    // alert(currentlyLoggedUser);
+    // if(currentlyLoggedUser == "administrator"){
+    //     $(".admin").show();
+    // }else {
+    //     $(".admin").hide();
+    // }
+
+
+
     showView('viewAdds');
 
     const kinveyAddsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey + "/Advertisments?query={}&sort={\"_kmd.lmt\": -1}";
@@ -806,7 +825,8 @@ function listAdds() {
                     let singleAddText = $('<p class="short">').html(shortTxt + "...");
                     let singleFullText = $('<p class="full">').html(fullText);
 
-
+                let btn_edit = $('<button class="buttonEdit btn btn-primary" data-id="'+add._id+'"><img class="zoomInZooMOut" src="media/edit.png" alt="edit post" />Edit</button>');
+                let btn_delete = $('<button class="buttonDelete btn btn-danger" data-id="'+add._id+'"><img class="zoomInZooMOut" src="media/delete.png" alt="delete post" />Delete</button>');
 
 
                     let postId = add._id;
@@ -825,40 +845,87 @@ function listAdds() {
                     let readMore = $('<button class="readMore btn btn-success" onclick="readMore(this)"><img class="zoomInZooMOut" src="media/cursor.png" alt="read more icon" />Read More..</button>').attr('id', postId);
                     let hideText = $('<button class="hide btn btn-success" onClick="hide(this)"><img class="zoomInZooMOut" src="media/hide.png" alt="hide text" />Hide...</button>').attr('id', postId);
 
+
+
                     var singleAdd = '';
 
 
-                    if(fullText.length <= 50){
-                        singleFullText = $('<p class="short">').html(fullText);
+
+                 if(currentlyLoggedUser == "administrator"){
+                     if(fullText.length <= 50){
+                         singleFullText = $('<p class="short">').html(fullText);
 
 
-                        let randQuote  = RandomQuote();
-                        let quotesDiv = $('<div class="advertQuotesPosts">' + '<p>' + randQuote + '</p>');
-                        let quotebutton = $('<button class="zoomInZoomOutButtons btn btn-success" onclick="advertQuotesPosts(this);"><img class="zoomInZooMOut" src="media/quotes.png" alt="quotes button" />Quote</button>').attr('id', postId);
-
-                        let copyButton = $('<button class="copyButton btn btn-success" onclick="copy(this)"><img class="zoomInZooMOut" src="media/copy.png" alt="hide text" />Copy</button>').attr('id', postId);
-                        let printButton = $('<button class="copyButton btn btn-success" onclick="printDiv(this)"><img class="zoomInZooMOut" src="media/printer.png" alt="hide text" />Print</button>').attr('id', postId);
-
-
-
-                        singleAdd = [singleAddHeading,singleAddAuthor,singleFullText, zoomIn, zoomOut, copyButton, printButton, quotebutton, quotesDiv];
-
-
-                    }else{
-                        shortTxt = add.description.substring(0, 51);
-                        singleAddText = $('<p class="short">').html(shortTxt + "...");
-
-
-                        let quotesDiv = $('<div class="quotesPost">');
-                        let quotebutton = $('<button class="zoomInZoomOutButtons btn btn-success" onclick="quotesPosts(this);"><img class="zoomInZooMOut" src="media/quotes.png" alt="quotes button" />Quote</button>').attr('id', postId);
+                         let randQuote  = RandomQuote();
+                         let quotesDiv = $('<div class="advertQuotesPosts">' + '<p>' + randQuote + '</p>');
+                         let quotebutton = $('<button class="zoomInZoomOutButtons btn btn-success" onclick="advertQuotesPosts(this);"><img class="zoomInZooMOut" src="media/quotes.png" alt="quotes button" />Quote</button>').attr('id', postId);
 
 
 
-                        let copyButton = $('<button class="copyButton btn btn-success" onclick="copyLongPosts(this)"><img class="zoomInZooMOut" src="media/copy.png" alt="hide text" />Copy</button>').attr('id', postId);
-                        let printButton = $('<button class="copyButton btn btn-success" onclick="printLongDiv(this)"><img class="zoomInZooMOut" src="media/printer.png" alt="hide text" />Print</button>').attr('id', postId);
+                         let copyButton = $('<button class="copyButton btn btn-success" onclick="copy(this)"><img class="zoomInZooMOut" src="media/copy.png" alt="hide text" />Copy</button>').attr('id', postId);
+                         let printButton = $('<button class="copyButton btn btn-success" onclick="printDiv(this)"><img class="zoomInZooMOut" src="media/printer.png" alt="hide text" />Print</button>').attr('id', postId);
 
-                        singleAdd = [singleAddHeading,singleAddAuthor,singleAddText, singleFullText, readMore, hideText, zoomIn, zoomOut, copyButton, printButton, quotebutton, quotesDiv];
-                    }
+
+
+                         singleAdd = [singleAddHeading,singleAddAuthor,singleFullText, zoomIn, zoomOut, copyButton, printButton, quotebutton, quotesDiv, btn_edit, btn_delete];
+
+
+                     }else{
+                         shortTxt = add.description.substring(0, 51);
+                         singleAddText = $('<p class="short">').html(shortTxt + "...");
+
+
+                         let quotesDiv = $('<div class="quotesPost">');
+                         let quotebutton = $('<button class="zoomInZoomOutButtons btn btn-success" onclick="quotesPosts(this);"><img class="zoomInZooMOut" src="media/quotes.png" alt="quotes button" />Quote</button>').attr('id', postId);
+
+
+
+                         let copyButton = $('<button class="copyButton btn btn-success" onclick="copyLongPosts(this)"><img class="zoomInZooMOut" src="media/copy.png" alt="hide text" />Copy</button>').attr('id', postId);
+                         let printButton = $('<button class="copyButton btn btn-success" onclick="printLongDiv(this)"><img class="zoomInZooMOut" src="media/printer.png" alt="hide text" />Print</button>').attr('id', postId);
+
+                         singleAdd = [singleAddHeading,singleAddAuthor,singleAddText, singleFullText, readMore, hideText, zoomIn, zoomOut, copyButton, printButton, quotebutton, quotesDiv, btn_edit, btn_delete];
+                     }
+                 }else{
+
+
+
+                     if(fullText.length <= 50){
+                         singleFullText = $('<p class="short">').html(fullText);
+
+
+                         let randQuote  = RandomQuote();
+                         let quotesDiv = $('<div class="advertQuotesPosts">' + '<p>' + randQuote + '</p>');
+                         let quotebutton = $('<button class="zoomInZoomOutButtons btn btn-success" onclick="advertQuotesPosts(this);"><img class="zoomInZooMOut" src="media/quotes.png" alt="quotes button" />Quote</button>').attr('id', postId);
+
+                         let copyButton = $('<button class="copyButton btn btn-success" onclick="copy(this)"><img class="zoomInZooMOut" src="media/copy.png" alt="hide text" />Copy</button>').attr('id', postId);
+                         let printButton = $('<button class="copyButton btn btn-success" onclick="printDiv(this)"><img class="zoomInZooMOut" src="media/printer.png" alt="hide text" />Print</button>').attr('id', postId);
+
+
+
+                         singleAdd = [singleAddHeading,singleAddAuthor,singleFullText, zoomIn, zoomOut, copyButton, printButton, quotebutton, quotesDiv];
+
+
+                     }else{
+                         shortTxt = add.description.substring(0, 51);
+                         singleAddText = $('<p class="short">').html(shortTxt + "...");
+
+
+                         let quotesDiv = $('<div class="quotesPost">');
+                         let quotebutton = $('<button class="zoomInZoomOutButtons btn btn-success" onclick="quotesPosts(this);"><img class="zoomInZooMOut" src="media/quotes.png" alt="quotes button" />Quote</button>').attr('id', postId);
+
+
+
+                         let copyButton = $('<button class="copyButton btn btn-success" onclick="copyLongPosts(this)"><img class="zoomInZooMOut" src="media/copy.png" alt="hide text" />Copy</button>').attr('id', postId);
+                         let printButton = $('<button class="copyButton btn btn-success" onclick="printLongDiv(this)"><img class="zoomInZooMOut" src="media/printer.png" alt="hide text" />Print</button>').attr('id', postId);
+
+                         singleAdd = [singleAddHeading,singleAddAuthor,singleAddText, singleFullText, readMore, hideText, zoomIn, zoomOut, copyButton, printButton, quotebutton, quotesDiv];
+                     }
+
+
+
+                 }
+
+
 
 
 
@@ -988,6 +1055,109 @@ function deleteAdd(event) {
 }
 
 function editAdd(event) {
+    event.preventDefault();
+    let id = $(this).attr('data-id');
+    const kinveyAddsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey + "/Advertisments/"+id;
+    const kinveyAuthHeaders = {
+        'Authorization': "Kinvey " + sessionStorage.getItem('authToken'),
+    };
+    var getData = {'_id': id};
+    $.ajax({
+        method: "GET",
+        url: kinveyAddsUrl,
+        headers: kinveyAuthHeaders,
+        data: null,
+        success: getAddSuccess,
+        error: handleAjaxError
+    });
+    function getAddSuccess(data) {
+        $('#addModifyTitle').val(data.title);
+        $('#addModifyDescription').val(data.description);
+        $('#addModifyId').val(data._id);
+        showModifyAddView();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function editAddAdmin(event) {
+    event.preventDefault();
+    let id = $(this).attr('data-id');
+    const kinveyAddsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey + "/Advertisments/"+id;
+    const kinveyAuthHeaders = {
+        'Authorization': "Kinvey " + sessionStorage.getItem('authToken'),
+    };
+    var getData = {'_id': id};
+    $.ajax({
+        method: "GET",
+        url: kinveyAddsUrl,
+        headers: kinveyAuthHeaders,
+        data: null,
+        success: getAddSuccess,
+        error: handleAjaxError
+    });
+    function getAddSuccess(data) {
+        $('#addModifyTitle').val(data.title);
+        $('#addModifyDescription').val(data.description);
+        $('#addModifyId').val(data._id);
+        showModifyAddViewAdmin();
+    }
+}
+
+
+
+
+
+function modifyAddAdmin() {
+    var id = escapeHtml($('#addModifyId').val());
+    const kinveyAddsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey+ "/Advertisments/"+id;
+    const kinveyAuthHeaders = {
+        'Authorization': "Kinvey " + sessionStorage.getItem('authToken'),
+    };
+
+    let addData = {
+        title: escapeHtml($('#addModifyTitle').val()),
+        author: currentlyLoggedUser,
+        description: escapeHtml($('#addModifyDescription').val())
+    }
+
+    $.ajax({
+        method: "PUT",
+        url: kinveyAddsUrl,
+        headers: kinveyAuthHeaders,
+        data: addData,
+        success: modifyAddSuccess,
+        error: handleAjaxError
+    });
+
+    function modifyAddSuccess(response) {
+        showMyAddsView();
+        showInfo('Add modified.');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+function editAddAdmin(event) {
     event.preventDefault();
     let id = $(this).attr('data-id');
     const kinveyAddsUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey + "/Advertisments/"+id;
